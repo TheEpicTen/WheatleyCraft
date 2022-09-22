@@ -1,25 +1,9 @@
-//Rewrite to www
-Options +FollowSymLinks
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^wheatleycraft.ml[nc]
-RewriteRule ^(.*)$ http://www.wheatleycraft.ml/$1 [r=301,nc]
+SSLOptions +StrictRequire
+SSLRequireSSL
+SSLRequire %{HTTP_HOST} eq "wheatleycraft.ml"
 
-//301 Redirect Old File
-Redirect 301 private.html /private/home.html
-
-//Password Protect file
-<Files https://wheatleycraft.ml/private/>
-AuthName "Prompt"
+#Protect Directory
+AuthName "Dialog prompt"
 AuthType Basic
-AuthUserFile https://wheatleycraft.ml/private/.htpasswd
+AuthUserFile /private/.htpasswd
 Require valid-user
-</Files>
-
-//Custom 404 errors
-ErrorDocument 404 404.html
-
-//Prevent viewing of .htaccess file
-<Files .htaccess>
-order allow,deny
-deny from all
-</Files>
