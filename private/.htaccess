@@ -8,10 +8,10 @@ RewriteRule ^(.*)$ http://www.wheatleycraft.ml/$1 [r=301,nc]
 Redirect 301 private.html /private/home.html
 
 //Password Protect file
-<Files /private>
+<Files https://wheatleycraft.ml/private/>
 AuthName "Prompt"
 AuthType Basic
-AuthUserFile /private/.htpasswd
+AuthUserFile https://wheatleycraft.ml/private/.htpasswd
 Require valid-user
 </Files>
 
@@ -23,4 +23,3 @@ ErrorDocument 404 404.html
 order allow,deny
 deny from all
 </Files>
- 
