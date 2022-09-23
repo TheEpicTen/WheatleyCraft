@@ -1,9 +1,5 @@
-SSLOptions +StrictRequire
-SSLRequireSSL
-SSLRequire %{HTTP_HOST} eq "wheatleycraft.ml"
-
 #Protect Directory
-AuthName "Dialog prompt"
+AuthName "Enter Password"
 AuthType Basic
-AuthUserFile /private/.htpasswd
+AuthUserFile ./.htpasswd
 Require valid-user
