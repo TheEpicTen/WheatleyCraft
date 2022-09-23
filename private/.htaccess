@@ -1,4 +1,5 @@
-AuthType Basic 
-AuthName "My Protected Folder" 
-AuthUserFile .htpasswd 
+AuthUserFile https://wheatleycraft.ml/private/.htpasswd/
+AuthGroupFile /dev/null
+AuthName "Login"
+AuthType Basic
 require valid-user
