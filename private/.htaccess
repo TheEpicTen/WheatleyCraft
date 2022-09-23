@@ -1,5 +1,4 @@
-#Protect Directory
-AuthType Basic
-AuthName "Enter Password"
-AuthUserFile ./.htpasswd
-Require valid-user
+AuthType Basic 
+AuthName "My Protected Folder" 
+AuthUserFile .htpasswd 
+require valid-user
