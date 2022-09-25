@@ -1,5 +1,0 @@
-AuthUserFile https://wheatleycraft.ml/private/.htpasswd/
-AuthGroupFile /dev/null
-AuthName "Login"
-AuthType Basic
-require valid-user
